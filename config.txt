@@ -1,4 +1,4 @@
-DiceConfig|186|42|40|9|6|0|true|3|0|0|0|0|0|0|0|0|0|false|false|3
+DiceConfig|191|42|40|9|6|0|true|3|0|0|0|0|0|0|0|0|0|false|false|3
 DiceRules|0|1|20|0|21
 SkillDef|true|178|Force|Représente sa force physique, sa capacité à soulever des objets lourds, à faire des dégats|false|-1||0|true|0
 SkillDef|true|179|Agilité|Représente son agilité, sa rapidité, son sens de l'équilibre|false|-1||0|true|0
@@ -172,6 +172,10 @@ PerkAction|79|4|-9|183
 PerkDef|165|false|___FEAT||0
 PerkDef|164|false|Ritualiste||0
 PerkAction|164|6|0|163
+PerkAction|164|8|0|190
+PerkDef|191|false|Inspiration divine|Vous êtes sous l'effet d'une inspiration divine. La fatigue vous atteind plus difficilement.|0
+PerkAction|191|7|3|53
+PerkAction|191|7|3|87
 Stat|29|Défense|10|10*1.0;12*1.0;183*1.0|0|false|false|true|Le seuil de réussite pour vous toucher.&brk;10 + moyenne (combat main nue + combat armé + Intuition)|1.0|false|false|1
 Stat|67|Armure|0||0|false|false|true|Niveau d'armure calculé automatiquement avec l'équipement porté par le joueur.&brk;Merci de rester fairplay et de ne pas cacher les pièces d'armures pour vous battre à poil...|1.0|false|false|0
 Stat|30|Resistance|0|180*1.0|0|false|false|true|Votre resistance aux coups, utilisée pour calculer si une attaque réussie vous fait des dégats. &brk;Resistance = Bonus de robustesse|1.0|false|false|0
@@ -207,7 +211,7 @@ SpellEffect|86|0|0|{caster} essaie de se soigner comme il peut&brk;{roll}|0|0|0|
 SpellEffect|86|2|0|{caster} est soulagé d'une blessure|0|0|1|1|||
 SpellEffect|86|0|1|-1|55|0|0|1|||
 SpellEffect|86|2|0|{caster} a raté son soin|0|0|0|2|||
-SpellDef|83|Repos|Soin personnel, permet de réduire l'usure de 2 / jour si le jet est réussi. (Apothicaire 12+)&brk;"Une petite tisane, au lit et demain ça ira mieux !"|1.0|1|1|0|18||2|12|false|false|true|false|1440|Icon152|false|false|0.0,1.0,0.0,1.0|Soin|false|false
+SpellDef|83|Repos|Soin personnel, permet de réduire l'usure de 2 / jour si le jet est réussi. (Apothicaire 12+)&brk;"Une petite tisane, au lit et demain ça ira mieux !"|1.0|1|1|0|18||2|12|false|false|true|false|1440|Icon323|false|false|0.0,1.0,0.0,1.0|Soin|false|false
 SpellReqDef|83|0|2|53|0.0|0.0|
 SpellEffect|83|0|0|{caster} est reposé|0|0|1|1|||
 SpellEffect|83|0|1|-2|53|0|0|1|||
@@ -222,6 +226,9 @@ SpellEffect|84|0|0|{caster} essaye de soulager {target}|0|0|0|0|||
 SpellEffect|84|0|0|{caster} a fait des merveilles, {target} se sent frais. &brk;|0|0|1|1|||
 SpellEffect|84|0|10|0|53|0|0|1|||
 SpellEffect|84|0|0|{caster} semble avoir raté son coup... {target} a toujours mal ! &brk;|0|0|1|2|||
+SpellDef|187|Premiers soins|Capacité pour réduire les niveaux de blessure d'un joueur après un roll. Purement RP mais vous pouvez sauver des vies ! &brk;ex: &brk;Roll blessure: 22 => blessure mortelle&brk;A votre appréciation, si votre roll de premier soin est suppérieur au roll de blessure, on peut considérer que le niveau de blessure est diminué de 1 (blessure grave), la blessure est stabilisée.|1.0|0|1|2|0|1d20 + Premier soins|2|16|false|true|false|false|15|Icon287|true|false|0.0,1.0,0.0,1.0|Soin|false|false
+SpellEffect|187|0|0|{caster} semble maitriser dans son domaine en soignant {target}, est ce que ça sera suffisant ? &brk;{comment}&brk;{roll}&brk;|0|0|0|1|||
+SpellEffect|187|0|0|{caster} ne semble pas réussire à soigner {target} dans l'urgence !&brk;{roll}|0|0|0|2|||
 SpellDef|70|_________roll auto||0.0|0|0|0|0||0|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false
 SpellDef|62|Blessure sur attaque ?|Automatise si l'attaque blesse ou non la cible&brk;Opposition Force de l'attaquant vs Resistance de la cible|1.0|0|1|2|0|Force|1|30|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0|Auto|false|false
 SpellEffect|62|2|0|Résultat: {roll} |0|0|0|0|||
@@ -530,6 +537,16 @@ SpellEffect|151|0|2|1|3461145|0|0|0|||
 SpellEffect|151|0|0|{caster} confectionne un elixir au propriété mystérieuse.|0|0|0|0|||
 SpellEffect|151|0|3|1|18292|0|0|0|||
 SpellEffect|151|0|3|1|11103|0|0|0|||
+SpellDef|189|_________DIVIN||0.0|0|0|0|0||0|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false
+SpellDef|190|Inspiration divine|Le prêtre ayant suffisament de point de sortilège peut inspirer ses fidèles|3.0|0|5|2|0|1d20 + Occultisme|2|12|false|true|false|false|1440|None|true|false|1.0,1.0,1.0,1.0|Divin|false|false
+SpellReqDef|190|0|3|163|10.0|0.0|
+SpellEffect|190|2|1|-2|140|0|0|0|||
+SpellEffect|190|2|1|-10|163|0|0|0|||
+SpellEffect|190|0|0|{caster} a invoqué la puissance de son dieu pour bénir ses fidèles|0|0|0|1|||
+SpellEffect|190|0|6||191|0|0|1|60|Divin|
+SpellEffect|190|0|1|-10|53|0|1|1|||
+SpellEffect|190|0|1|-20|55|0|1|1|||
+SpellEffect|190|0|0|{target} n'est pas réceptif à la bénédiction|0|0|0|2|||
 MutatorDef|60|Armure légère|false|false
 MutatorCondition|60|0|9|0|0|1.0|0.0|
 MutatorAction|60|1|67|3
@@ -547,6 +564,9 @@ MutatorAction|82|3|80|0
 MutatorDef|85|Apothicaire entrainé|false|false
 MutatorCondition|85|0|2|3|18|6.0|0.0|
 MutatorAction|85|3|84|0
+MutatorDef|188|Médecin de terrain|false|false
+MutatorCondition|188|0|2|3|16|6.0|0.0|
+MutatorAction|188|3|187|0
 StatusDef|74|[AFK]|0.0,0.0,0.890438,1.0|true
 StatusDef|56|Légérement blessé|1.0,1.0,0.139442,1.0|true
 StatusAction|56|104|0|2
