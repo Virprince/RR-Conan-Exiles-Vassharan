@@ -1,0 +1,591 @@
+DiceConfig|186|42|40|9|6|0|true|3|0|0|0|0|0|0|0|0|0|false|false|3
+DiceRules|0|1|20|0|21
+SkillDef|true|178|Force|Représente sa force physique, sa capacité à soulever des objets lourds, à faire des dégats|false|-1||0|true|0
+SkillDef|true|179|Agilité|Représente son agilité, sa rapidité, son sens de l'équilibre|false|-1||0|true|0
+SkillDef|true|180|Robustesse|Représente la resistance aux blessures, à l'alcool, aux poisons, aux maladies|false|-1||0|true|0
+SkillDef|true|181|Volonté|Représente la faculté de resister aux influences extérieures (colère, douleur, doute), se concentrer, garder son sang froid|false|-1||0|true|0
+SkillDef|true|182|Raisonnement|Représente la faculté de réagir aux éléments factuels, de faire des associations d'idées, etc&brk;|false|-1||0|true|0
+SkillDef|true|183|Intuition|Représente l'instinct, l'interprétation de signe, l'intuition, l'évaluation|false|-1||0|true|0
+SkillDef|false|8|_________COMBAT||false|-1|8*1.0|0|false|0
+SkillDef|false|10|Combat main nue|Représente tout type de combat sans arme (bagarre, lutte, art martiaux etc)&brk;(moyenne Force, Agilité, Volonté)x0.4 arr inférieur|false|-1|178*0.4;179*0.4;181*0.4|0|true|1
+SkillDef|false|12|Combat armé|Représente tout type de combat avec une arme (armes 1 main, armes 2 mains, armes improvisées, boucliers, etc)&brk;(moyenne Force, Agilité, Raisonnement)x0.4 arr inférieur|false|-1|178*0.4;179*0.4;182*0.4|0|true|1
+SkillDef|false|13|Combat distance|Représente tout type de combat à distance (arcs, armes de jet, lancer son arme, etc)&brk;(moyenne Force, Agilité, Intuition)x0.4 arr inférieur|false|-1|178*0.4;179*0.4;183*0.4|0|true|1
+SkillDef|false|14|_________SOIN||false|-1|14*1.0|0|false|0
+SkillDef|false|16|Premier soins|Représente la capacité à soigner les blessures en situation d'urgence, à stabiliser un blessé, à réduire le niveau des blessures sur le moment.&brk;(Ex: poser un garot, poser un bandage, une atelle de fortune, etc)&brk;(moyenne Volonté, Intuition)x0.4 arr inférieur|false|-1|181*0.4;183*0.4|0|true|1
+SkillDef|false|17|Chirurgie|Représente la connaissance médicale du corps humain et la capacité d'effectuer des actions complexe pour soigner des blessures. Ces actions doivent être effectuées dans un environnement calme (pas au milieu de l'action)&brk;&brk;ex: recoudre une plaie, amputer, réduire une hémoragie, réduire une fracture, retirer un projectile, etc&brk;(moyenne Volonté, Raisonnement)x0.4 arr inférieur|false|-1|181*0.4;182*0.4|0|true|0
+SkillDef|false|18|Apothicaire|Représente la connaissance en herboristerie, chimie et alchimie, symptomes des maladies, poisons et comment les traiter. Peut se rapprocher de la médecine générale.&brk;(moyenne Raisonnement, Intuition)x0.4 arr inférieur|false|-1|182*0.4;183*0.4|0|true|0
+SkillDef|false|19|_________CAPACITES||false|-1|19*1.0|0|false|0
+SkillDef|false|184|Athlétisme|Représente l'utilisation de vos capacités physiques pour des occasions comme l'escalade, la course de vitesse ou d'endurance, tirer une corde, etc&brk;(moyenne Force, Agilité, Robustesse)x0.4 arr inférieur|false|-1|178*0.4;179*0.4;180*0.4|0|true|1
+SkillDef|false|20|Artisanat|Représente la connaissance d'un métier manuel ou d'une famille de métier, l'habitude du travail manuel, etc. &brk;&brk;Les joueurs sont libre de l'interprétation mais attention, un professionnel forgeron n'est pas obligatoirement un professionnel charpentier...&brk;(moyenne Agilité, Raisonnement, Robustesse)x0.4 arr inférieur|false|-1|179*0.4;182*0.4;180*0.4|0|true|1
+SkillDef|false|177|Représentation|Représente la capacité à se donner en spectacle, chant, musique, théatre.&brk;(moyenne Agilité, Intuition, Robustesse)x0.4 arr inférieur|false|-1|179*0.4;183*0.4;180*0.4|0|false|1
+SkillDef|false|24|Escamotage|Représente la capacité à voler, à crocheter, à faire disparaitre un objet alors qu'on est en public, à faire un tour de passe passe, a subtiliser discrétement un objet sur un personnage.&brk;(moyenne Agilité, Volonté, Intuition)x0.4 arr inférieur|false|-1|179*0.4;183*0.4;181*0.4|0|true|1
+SkillDef|false|27|Occultisme|Représente les connaissances occulte en sorcellerie ou magie divine, la capacité du personnage à conduire ou à participer à des rituels.&brk;(moyenne Volonté, Intuition, Raisonnement)x0.4 arr inférieur|true|0|181*0.4;182*0.4;183*0.4|0|true|1
+SkillDef|false|22|Discrétion|Représente la capacité à se déplacer de manière silencieuse, à savoir se fondre dans la masse ou le décors, à se déplacer dans les ombres, à faire des signes sans attirer l'attention.&brk;(moyenne Agilité, Intuition)x0.4 arr inférieur|false|-1|179*0.4;183*0.4|0|true|1
+SkillDef|false|21|Perception|Représente la capacité d'observation de l'environnement, remarquer des détails proche ou lointain, l'évaluation des distances, les actions/intentions physique d'un personnage (ex remarquer une lame dissimulée, remarquer une posture agressive) mais PAS les intentions "sociale" (ex: sembler mentir, sembler géné )&brk;(moyenne Raisonnement, Intuition)x0.4 arr inférieur|false|-1|183*0.4;182*0.4|0|true|0
+SkillDef|false|25|Tromperie|Représente la capacité à mentir, à déguiser la vérité, à jouer la comédie, à dissimuler ses intentions, à tromper, etc&brk;(moyenne Volonté, Intuition)x0.4 arr inférieur|false|-1|181*0.4;183*0.4|0|true|1
+SkillDef|false|26|Psychologie|Représente la capacité à sentir l'état d'esprit d'un personnage, reconnaitre un mensonge, lire le langage corporel, etc.&brk;(moyenne Raisonnement, Intuition)x0.4 arr inférieur|false|-1|182*0.4;183*0.4|0|true|1
+SkillDef|false|28|Héritage|Représente votre lien avec le pouvoir des stèles|true|-1|19*1.0|0|false|0
+PerkDef|35|false|___METIERS||0
+PerkDef|31|true|Combattant|Vous avez passé la majeure partie de votre vie à vous battre.&brk;Soldat, mercenaire, gladiateur, etc|1
+PerkAction|31|4|3|178
+PerkAction|31|4|3|181
+PerkAction|31|4|2|184
+PerkAction|31|4|2|10
+PerkAction|31|4|2|12
+PerkAction|31|4|2|16
+PerkAction|31|4|2|21
+PerkAction|31|3|0|32
+PerkAction|31|3|0|33
+PerkAction|31|3|0|34
+PerkDef|32|true|Erudit|Vous avez passé la majeure partie de votre temp à étudier. &brk;Prêtre, érudit, conseiller, medecin, alchimiste, etc|1
+PerkAction|32|4|3|180
+PerkAction|32|4|3|182
+PerkAction|32|4|2|10
+PerkAction|32|4|2|16
+PerkAction|32|4|2|17
+PerkAction|32|4|2|18
+PerkAction|32|4|2|27
+PerkAction|32|3|0|31
+PerkAction|32|3|0|33
+PerkAction|32|3|0|34
+PerkDef|33|true|Roublard|Vous avez passé la majeure partie de votre vie à survivre en ne comptant que sur vous même.&brk;Chasseur, voleur, vagabond, aventurier, assassin, etc|1
+PerkAction|33|4|3|179
+PerkAction|33|4|3|183
+PerkAction|33|4|2|13
+PerkAction|33|4|2|21
+PerkAction|33|4|2|22
+PerkAction|33|4|2|24
+PerkAction|33|4|2|25
+PerkAction|33|3|0|31
+PerkAction|33|3|0|32
+PerkAction|33|3|0|34
+PerkDef|34|true|Artisan|Vous avez passé la majeure partie de votre vie à travailler avec vos mains pour créer et vendre le fruit de votre labeur. &brk;Artisanat divers, fermier, éleveur, cuisinier, peintre, etc|1
+PerkAction|34|4|3|180
+PerkAction|34|4|3|181
+PerkAction|34|4|2|12
+PerkAction|34|4|2|20
+PerkAction|34|4|2|21
+PerkAction|34|4|2|26
+PerkAction|34|4|2|25
+PerkAction|34|3|0|32
+PerkAction|34|3|0|33
+PerkAction|34|3|0|31
+PerkDef|36|false|___GUILDES||0
+PerkDef|37|false|Loaras Initié|Vous avez commencé votre entrainement chez les Loaras|0
+PerkAction|37|4|3|178
+PerkAction|37|4|4|28
+PerkAction|37|4|2|12
+PerkAction|37|4|2|21
+PerkAction|37|8|0|96
+PerkDef|98|false|Loaras Compagnon|Vous êtes considéré comme un Loaras expérimenté.|0
+PerkAction|98|8|0|97
+PerkAction|98|8|0|105
+PerkAction|98|8|0|107
+PerkAction|98|8|0|106
+PerkAction|98|8|0|108
+PerkAction|98|4|4|28
+PerkDef|155|false|Loaras Mentor|Vous voilà Mentor, vous avez la responsabilité de former les aspirants et les initiés sur la voie de votre guilde.|0
+PerkAction|155|4|4|28
+PerkDef|38|false|Keldar Initié||0
+PerkAction|38|4|3|179
+PerkAction|38|4|2|24
+PerkAction|38|4|2|13
+PerkAction|38|4|4|28
+PerkDef|102|false|Keldar Compagnon||0
+PerkDef|157|false|Keldar Mentor|Vous voilà Mentor, vous avez la responsabilité de former les aspirants et les initiés sur la voie de votre guilde.|0
+PerkAction|157|4|3|28
+PerkDef|39|false|Lysais Initié||0
+PerkAction|39|4|3|182
+PerkAction|39|4|2|10
+PerkAction|39|4|2|177
+PerkAction|39|4|4|28
+PerkDef|103|false|Lysais Compagnon||0
+PerkDef|156|false|Lysais Mentor|Vous voilà Mentor, vous avez la responsabilité de former les aspirants et les initiés sur la voie de votre guilde.|0
+PerkAction|156|4|3|28
+PerkDef|40|false|Zenthari Initié||0
+PerkAction|40|4|3|181
+PerkAction|40|4|2|10
+PerkAction|40|4|2|27
+PerkAction|40|4|3|28
+PerkAction|40|8|0|111
+PerkAction|40|6|0|140
+PerkDef|99|false|Zenthari Compagnon||0
+PerkDef|160|false|Zenthari Mentor|Vous voilà Mentor, vous avez la responsabilité de former les aspirants et les initiés sur la voie de votre guilde.|0
+PerkAction|160|4|3|28
+PerkDef|41|false|Sinaran Initié||0
+PerkAction|41|4|3|183
+PerkAction|41|4|2|13
+PerkAction|41|4|2|184
+PerkAction|41|4|4|28
+PerkDef|101|false|Sinaran Compagnon||0
+PerkDef|158|false|Sinaran Mentor|Vous voilà Mentor, vous avez la responsabilité de former les aspirants et les initiés sur la voie de votre guilde.|0
+PerkAction|158|4|3|28
+PerkDef|42|false|Assinshen Initié||0
+PerkAction|42|4|3|180
+PerkAction|42|4|2|20
+PerkAction|42|4|2|12
+PerkAction|42|4|4|28
+PerkDef|100|false|Assinshen Compagnon||0
+PerkDef|159|false|Assinshen Mentor|Vous voilà Mentor, vous avez la responsabilité de former les aspirants et les initiés sur la voie de votre guilde.|0
+PerkAction|159|4|3|28
+PerkDef|43|false|___PACKS||0
+PerkDef|44|false|Urgentiste||0
+PerkAction|44|4|2|16
+PerkDef|45|false|Alchimiste||0
+PerkAction|45|4|2|18
+PerkDef|46|false|Charcutier||0
+PerkAction|46|4|2|17
+PerkDef|47|false|Bagarreur||0
+PerkAction|47|4|2|10
+PerkDef|48|false|Fine Lame||0
+PerkAction|48|4|2|12
+PerkDef|49|false|Campeur||0
+PerkAction|49|4|2|13
+PerkDef|104|false|Malus global minime||0
+PerkAction|104|4|-1|178
+PerkAction|104|4|-1|179
+PerkAction|104|4|-1|180
+PerkAction|104|4|-1|181
+PerkAction|104|4|-1|182
+PerkAction|104|4|-1|183
+PerkDef|77|false|Malus global léger||0
+PerkAction|77|4|-3|178
+PerkAction|77|4|-3|179
+PerkAction|77|4|-3|180
+PerkAction|77|4|-3|181
+PerkAction|77|4|-3|182
+PerkAction|77|4|-3|183
+PerkDef|78|false|Malus global moyen||0
+PerkAction|78|4|-6|178
+PerkAction|78|4|-6|179
+PerkAction|78|4|-6|180
+PerkAction|78|4|-6|181
+PerkAction|78|4|-6|182
+PerkAction|78|4|-6|183
+PerkDef|79|false|Malus global grave||0
+PerkAction|79|4|-9|178
+PerkAction|79|4|-9|179
+PerkAction|79|4|-9|180
+PerkAction|79|4|-9|181
+PerkAction|79|4|-9|182
+PerkAction|79|4|-9|183
+PerkDef|165|false|___FEAT||0
+PerkDef|164|false|Ritualiste||0
+PerkAction|164|6|0|163
+Stat|29|Défense|10|10*1.0;12*1.0;183*1.0|0|false|false|true|Le seuil de réussite pour vous toucher.&brk;10 + moyenne (combat main nue + combat armé + Intuition)|1.0|false|false|1
+Stat|67|Armure|0||0|false|false|true|Niveau d'armure calculé automatiquement avec l'équipement porté par le joueur.&brk;Merci de rester fairplay et de ne pas cacher les pièces d'armures pour vous battre à poil...|1.0|false|false|0
+Stat|30|Resistance|0|180*1.0|0|false|false|true|Votre resistance aux coups, utilisée pour calculer si une attaque réussie vous fait des dégats. &brk;Resistance = Bonus de robustesse|1.0|false|false|0
+Stat|53|Fatigue|0|180*0.4|1|false|false|true|Fatigue accumulée sous les coups. Une fois la jauge pleine, une blessure est automatiquement roll.&brk;Robustesse|1.0|true|false|0
+Stat|87|Ref Fatigue|0|180*0.4|1|false|false|false||1.0|false|true|0
+Stat|55|Usure|20||0|false|true|true|Chaque blessure dans un combat RR ajoute des points. Quand l'usure est au max, le jet de blessure devient automatique. &brk;Le nombre de blessures est ajouté au roll qui calcule la gravité du coup porté. (1d20 + Usure - armure )|1.0|true|false|0
+Stat|109|Magie|1|181*1.0;27*1.0;28*1.0|0|false|false|true|Votre potentiel magique... peut servir lorsque vous êtes sollicité lors de rituel, sert aussi de resistance à la magie.|1.0|false|false|0
+Stat|140|Rituel|0|27*1.0;28*1.0;181*0.3|0|false|false|false|Vos points pour effectuer des rituels lorsque vous en êtes capable.|1.0|true|false|0
+Stat|163|Sortilège|0||0|false|false|false|Débloqué lors d'un rituel, représente le pouvoir magique accumulé part les participants ! &brk;Attention, c'est dangereux.... &brk;(et si tu vois ça alors que tu n'as jamais fait de rituel c'est un bug qu'il faut signaler :) ) |1.0|false|false|0
+SpellDef|88|_________COMBAT||0.0|0|0|0|0||0|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false
+SpellDef|68|Attaque main nue|Pour toute attaque sans arme: Coup de poing, coup de pied, lutte, bagarre, art martiaux, etc|1.0|0|1|0|10||1|29|false|true|true|false|0|Icon264|true|false|1.0,1.0,1.0,1.0|Combat|false|false
+SpellEffect|68|0|0|{caster} attaque {target} à mains nue: {roll}&brk;{comment}|0|0|0|0|||
+SpellEffect|68|0|9||62|0|0|1|||
+SpellEffect|68|0|0|L'attaque de {caster} sur {target} est ratée|0|0|0|2|||
+SpellDef|51|Attaque armée|Pour toute attaque armée: armes 1 main, armes 2 mains, armes improvisées, bouclier, etc|1.5|0|1|0|12||1|29|false|true|true|false|0|Icon174|true|false|1.0,1.0,1.0,1.0|Combat|false|false
+SpellEffect|51|0|0|{caster} attaque {target} avec son arme: {roll}&brk;{comment}|0|0|0|0|||
+SpellEffect|51|0|9||62|0|0|1|||
+SpellEffect|51|0|0|L'attaque de {caster} sur {target} est ratée|0|0|0|2|||
+SpellDef|69|Attaque distance|Pour toute attaque à distance: Arcs, javelots, armes de jet, lancer son arme en main, etc.&brk;Lancer une arme qui n'est pas fait pour devrait avoir un malus.|5.0|0|1|0|13||1|29|false|true|true|false|0|Icon331|true|false|1.0,1.0,1.0,1.0|Combat|false|false
+SpellEffect|69|0|0|{caster} attaque {target} à distance: {roll}&brk;{comment}|0|0|0|0|||
+SpellEffect|69|0|9||62|0|0|1|||
+SpellEffect|69|0|0|L'attaque de {caster} sur {target} est ratée|0|0|0|2|||
+SpellDef|73|Blessure|Jet de blessure 1d20 - la stat d'armure + Usure&brk;Si le resultat est positif => Usure + 5&brk;Si le résultat est négatif => Fatigue + 1|1.0|0|1|2|0|1d20 - Armure + Usure|2|0|false|false|true|false|0|Icon242|false|false|1.0,0.0,0.0,1.0|Combat|false|false
+SpellEffect|73|0|0|( roll blessure = 1d20 - Armure + Usure)  |0|0|0|0|||
+SpellEffect|73|0|0|{caster} est blessé {roll}&brk;0-9 => léger &pipe; 10-16 => sérieux &pipe; 17-19 => grave &pipe; 20+ => mortel si non soignée|0|0|0|1|||
+SpellEffect|73|0|1|5|55|0|0|1|||
+SpellEffect|73|0|0|{caster} a une égratignure|0|0|0|2|||
+SpellEffect|73|0|9||81|0|0|2|||
+SpellDef|89|_________SOINS||0.0|0|0|0|0||0|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false
+SpellDef|86|Bisous magique|Soin personnel, permet de réduire 1 blessure / jour si le jet est réussi. (Chirurgie 12+)&brk;"Non mais quelqu'un m'a dit que sa grand mère faisait ça"|1.0|1|1|0|16||2|12|false|false|true|false|1440|Icon130|false|false|0.0,1.0,0.0,1.0|Soin|false|false
+SpellReqDef|86|0|2|55|0.0|0.0|
+SpellEffect|86|0|0|{caster} essaie de se soigner comme il peut&brk;{roll}|0|0|0|0|||
+SpellEffect|86|2|0|{caster} est soulagé d'une blessure|0|0|1|1|||
+SpellEffect|86|0|1|-1|55|0|0|1|||
+SpellEffect|86|2|0|{caster} a raté son soin|0|0|0|2|||
+SpellDef|83|Repos|Soin personnel, permet de réduire l'usure de 2 / jour si le jet est réussi. (Apothicaire 12+)&brk;"Une petite tisane, au lit et demain ça ira mieux !"|1.0|1|1|0|18||2|12|false|false|true|false|1440|Icon152|false|false|0.0,1.0,0.0,1.0|Soin|false|false
+SpellReqDef|83|0|2|53|0.0|0.0|
+SpellEffect|83|0|0|{caster} est reposé|0|0|1|1|||
+SpellEffect|83|0|1|-2|53|0|0|1|||
+SpellEffect|83|0|0|{caster} a mal dormi|0|0|1|2|||
+SpellDef|80|Ostéopathie|Un bon massage, quelques conseils pour réduire le nombre de points de blessure accumulés après des combats. &brk;(Chirurgie 18+)|1.0|0|1|0|17||2|18|false|false|false|false|10|Icon131|false|false|0.0,1.0,0.0,1.0|Soin|false|false
+SpellEffect|80|0|0|{caster} essaye de soulager {target}|0|0|0|0|||
+SpellEffect|80|0|0|{caster} a fait des merveilles, {target} ne sent plus le poids des anciennes blessures. &brk;|0|0|1|1|||
+SpellEffect|80|0|10|0|55|0|0|1|||
+SpellEffect|80|0|0|{caster} semble avoir raté son coup... {target} a toujours mal ! &brk;|0|0|1|2|||
+SpellDef|84|Homéopathie|Une bonne tisane, quelques conseils pour se reposer et l'usure du combat est un mauvais souvenir.&brk;(Apoticaire 18+)|1.0|0|1|0|18||2|18|false|false|false|false|10|Icon297|false|false|0.0,1.0,0.0,1.0|Soin|false|false
+SpellEffect|84|0|0|{caster} essaye de soulager {target}|0|0|0|0|||
+SpellEffect|84|0|0|{caster} a fait des merveilles, {target} se sent frais. &brk;|0|0|1|1|||
+SpellEffect|84|0|10|0|53|0|0|1|||
+SpellEffect|84|0|0|{caster} semble avoir raté son coup... {target} a toujours mal ! &brk;|0|0|1|2|||
+SpellDef|70|_________roll auto||0.0|0|0|0|0||0|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false
+SpellDef|62|Blessure sur attaque ?|Automatise si l'attaque blesse ou non la cible&brk;Opposition Force de l'attaquant vs Resistance de la cible|1.0|0|1|2|0|Force|1|30|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0|Auto|false|false
+SpellEffect|62|2|0|Résultat: {roll} |0|0|0|0|||
+SpellEffect|62|2|0|{caster} subit une blessure !|0|0|0|1|||
+SpellEffect|62|2|9||73|0|0|1|||
+SpellEffect|62|2|0|{caster} n'a rien senti !|0|0|0|2|||
+SpellEffect|62|2|1|1|53|0|0|2|||
+SpellDef|81|Jauge fatigue|Compare Fatigue + 1 à la reférence de Fatigue, quand la comparaison est un succès, le joueur est à sa Fatigue max et ajoute 5 points d'Usure.|1.0|1|1|2|0|Fatigue + 1|1|87|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0|Auto|false|false
+SpellEffect|81|0|0|{caster} a trop encaissé.|0|0|0|1|||
+SpellEffect|81|0|1|5|55|0|0|1|||
+SpellEffect|81|0|1|1|53|0|0|2|||
+SpellDef|162|Participer au rituel (Zenthari)||0.0|0|0|1|109||2|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0|Auto|false|false
+SpellReqDef|162|3|0|40|0.0|0.0|
+SpellReqDef|162|0|2|140|0.0|0.0|
+SpellReqDef|162|3|1|40|0.0|0.0|
+SpellEffect|162|0|1|Rituel|163|0|0|0|||
+SpellEffect|162|0|0|{caster} participe au rituel de {target} !|0|0|0|0|||
+SpellEffect|162|2|10|0|140|0|0|0|||
+SpellEffect|162|2|0|Votre énergie magique a été entièrement aspirée, vous sentez une extrême fatigue.|0|0|1|0|||
+SpellDef|166|Participer au rituel||0.0|0|0|1|109||2|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0|Auto|false|false
+SpellEffect|166|0|1|Magie|163|0|0|0|||
+SpellEffect|166|0|0|{caster} participe au rituel de {target} !|0|0|0|0|||
+SpellEffect|166|0|1|10|53|0|0|0|||
+SpellEffect|166|2|0|Vous vous sentez totalement vidé de vos forces !|0|0|1|0|||
+SpellDef|90|_________LOARAS||0.0|0|0|0|0||0|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false
+SpellDef|96|La voie du chasseur|Le personnage est capable d'utiliser son lien avec la guilde pour préparer une potion qui le plonge dans une transe prédatrice. La tolérance à la douleur du personnage augmente pendant un lapse de temps, en contrepartie le personnage entrera dans un état saoule. |0.0|1|0|2|0|Robustesse|0|180|false|false|false|false|1440|Icon258|false|false|1.0,0.0,0.0,1.0|Loaras|false|false
+SpellReqDef|96|6|0|18294|0.0|0.0|1
+SpellReqDef|96|6|0|11103|0.0|0.0|1
+SpellEffect|96|0|2|1|899195|0|0|0|||
+SpellEffect|96|0|0|Confection d'une potion étrange|0|0|0|0|||
+SpellEffect|96|0|3|1|11103|0|0|0|||
+SpellEffect|96|0|3|1|18294|0|0|0|||
+SpellTargetCond|96|0|0|0|37|0.0|0.0|
+SpellDef|97|Confection peinture de chasse - Force|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture appliquée sur la peau en respectant certain motif que seul sa guilde connais, le personnage est pris par un nouveau souffle. Une force brute l'envahit.|0.0|1|0|2|0|Artisanat|0|20|false|false|false|false|0|Icon182|false|false|1.0,0.0,0.0,1.0|Loaras|false|false
+SpellReqDef|97|6|0|11103|0.0|0.0|1
+SpellReqDef|97|6|0|53527|0.0|0.0|1
+SpellEffect|97|0|2|1|3461132|0|0|0|||
+SpellEffect|97|0|0|Confection d'une mixture étrange.|0|0|0|0|||
+SpellEffect|97|0|3|1|11103|0|0|0|||
+SpellEffect|97|0|3|1|53527|0|0|0|||
+SpellTargetCond|97|0|0|0|98|0.0|0.0|
+SpellDef|105|Confection peinture de chasse - Agilité|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture appliquée sur la peau en respectant certain motif que seul sa guilde connais, le personnage est pris par un nouveau souffle. Une force brute l'envahit.|0.0|1|0|2|0|Artisanat|0|20|false|false|false|false|0|Icon182|false|false|1.0,0.0,0.0,1.0|Loaras|false|false
+SpellReqDef|105|6|0|11103|0.0|0.0|1
+SpellReqDef|105|6|0|53528|0.0|0.0|1
+SpellEffect|105|0|2|1|3461133|0|0|0|||
+SpellEffect|105|0|0|Confection d'une mixture étrange.|0|0|0|0|||
+SpellEffect|105|0|3|1|53528|0|0|0|||
+SpellEffect|105|0|3|1|11103|0|0|0|||
+SpellTargetCond|105|0|0|0|98|0.0|0.0|
+SpellDef|107|Confection peinture de chasse - Vitalité|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture appliquée sur la peau en respectant certain motif que seul sa guilde connais, le personnage est pris par un nouveau souffle. Une force brute l'envahit.|0.0|1|0|2|0|Artisanat|0|20|false|false|false|false|0|Icon182|false|false|1.0,0.0,0.0,1.0|Loaras|false|false
+SpellReqDef|107|6|0|11103|0.0|0.0|1
+SpellReqDef|107|6|0|53529|0.0|0.0|1
+SpellEffect|107|0|2|1|3461134|0|0|0|||
+SpellEffect|107|0|0|Confection d'une mixture étrange.|0|0|0|0|||
+SpellEffect|107|0|3|1|53529|0|0|0|||
+SpellEffect|107|0|3|1|11103|0|0|0|||
+SpellTargetCond|107|0|0|0|98|0.0|0.0|
+SpellDef|106|Confection peinture de chasse - Précision|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture appliquée sur la peau en respectant certain motif que seul sa guilde connais, le personnage est pris par un nouveau souffle. Une force brute l'envahit.|0.0|1|0|2|0|Artisanat|0|20|false|false|false|false|0|Icon182|false|false|1.0,0.0,0.0,1.0|Loaras|false|false
+SpellReqDef|106|6|0|11103|0.0|0.0|1
+SpellReqDef|106|6|0|53530|0.0|0.0|1
+SpellEffect|106|0|2|1|3461135|0|0|0|||
+SpellEffect|106|0|0|Confection d'une mixture étrange.|0|0|0|0|||
+SpellEffect|106|0|3|1|53530|0|0|0|||
+SpellEffect|106|0|3|1|11103|0|0|0|||
+SpellTargetCond|106|0|0|0|98|0.0|0.0|
+SpellDef|108|Poudre de vision nocturne|Une poudre à ingérer permettant de voir dans le noir|0.0|1|0|2|0|Artisanat|0|20|false|false|false|false|0|Icon151|false|false|1.0,0.0,0.0,1.0|Loaras|false|false
+SpellReqDef|108|3|0|98|0.0|0.0|
+SpellReqDef|108|6|0|11103|0.0|0.0|1
+SpellEffect|108|0|2|1|92147|0|0|0|||
+SpellEffect|108|0|0|Confection d'une mixture étrange.|0|0|0|0|||
+SpellEffect|108|0|3|1|11103|0|0|0|||
+SpellDef|91|_________KELDARS||0.0|0|0|0|0||0|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false
+SpellDef|116|Bombabrume !|Permet de créer, à partir d'un savant cocktail d'ingrédients alchimiques, une substance instable qui provoque un épais nuage de fumée lorsqu'elle est renversée. De quoi faire diversion ou disparaitre...|0.0|1|0|0|20||0|20|false|false|false|false|300|Icon200|false|false|0.531915,0.221885,0.671733,1.0|Keldar|false|false
+SpellReqDef|116|6|0|11103|0.0|0.0|1
+SpellReqDef|116|6|0|11125|0.0|0.0|1
+SpellEffect|116|0|2|1|2711430|0|0|0|||
+SpellEffect|116|0|0|{caster} termine de verser délicatement sa mixture dans la fiole de verre.|0|0|0|0|||
+SpellEffect|116|0|3|1|11103|0|0|0|||
+SpellEffect|116|0|3|1|11125|0|0|0|||
+SpellDef|117|Dissimulation|Le personnage s’harmonise avec le lien de sa guilde, son corps, sa peau ce pigmente, prennant les couleurs de l'environement jusqu'a finalement devenir invisible au yeux des autres durant un cours instant.|0.0|1|0|0|20||0|20|false|false|false|false|300|Icon230|false|false|0.531915,0.221885,0.671733,1.0|Keldar|false|false
+SpellReqDef|117|6|0|11103|0.0|0.0|1
+SpellReqDef|117|6|0|18300|0.0|0.0|1
+SpellEffect|117|0|2|1|2711178|0|0|0|||
+SpellEffect|117|0|0|{caster} termine de verser délicatement sa mixture dans la fiole de verre.|0|0|0|0|||
+SpellEffect|117|0|3|1|11103|0|0|0|||
+SpellEffect|117|0|3|1|18300|0|0|0|||
+SpellDef|118|L'oeil du corbeau|Le personnage s'harmonise avec le lien de sa guilde, sa vision devient net, l'ombre ce transforme en lumière et la nuit devient le jour.|0.0|1|0|0|20||0|20|false|false|false|false|300|Icon124|false|false|0.531915,0.221885,0.671733,1.0|Keldar|false|false
+SpellReqDef|118|6|0|11103|0.0|0.0|1
+SpellReqDef|118|6|0|18293|0.0|0.0|1
+SpellEffect|118|0|2|1|19502|0|0|0|||
+SpellEffect|118|0|0|Les yeux du personnage semble luire dans l'obscurité.|0|0|0|0|||
+SpellEffect|118|0|3|1|11103|0|0|0|||
+SpellEffect|118|0|3|1|18293|0|0|0|||
+SpellDef|119|Saut félin|Le personnage créer un mélange gazeux qui à la particularité de faire rebondir, le ou les personnage sautant dans la fumé par la suite.|0.0|1|0|0|20||0|20|false|false|false|false|300|Icon254|false|false|0.531915,0.221885,0.671733,1.0|Keldar|false|false
+SpellReqDef|119|6|0|11103|0.0|0.0|1
+SpellReqDef|119|6|0|11122|0.0|0.0|1
+SpellEffect|119|0|2|1|19502|0|0|0|||
+SpellEffect|119|0|0|Le personnage lance une orbe créant un épais nuage de fumé sur lequelle il est possible de rebondir en sautant dedans.|0|0|0|0|||
+SpellEffect|119|0|3|1|11103|0|0|0|||
+SpellEffect|119|0|3|1|11122|0|0|0|||
+SpellDef|120|Crochet Keldars|Permet à l'utilisateur de confectionner des outils permettant de crocheter divers coffre et porte|0.0|1|0|0|20||0|20|false|false|false|false|300|Icon215|false|false|0.531915,0.221885,0.671733,1.0|Keldar|false|false
+SpellReqDef|120|6|0|11103|0.0|0.0|1
+SpellEffect|120|0|2|1|833002|0|0|0|||
+SpellEffect|120|0|0|{caster} confectionne un outils.|0|0|0|0|||
+SpellEffect|120|0|3|1|11103|0|0|0|||
+SpellDef|95|_________ASSINSHEN||0.0|0|0|0|0||0|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false
+SpellDef|121|Confection d’enduit - Force|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture appliquée sur les armes ou les outils, les personnages pourront noté une net amélioration de leur capacité physique.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon159|false|false|0.021277,0.054711,1.0,1.0|Assinshen|false|false
+SpellReqDef|121|6|0|11103|0.0|0.0|1
+SpellEffect|121|0|2|1|92304|0|0|0|||
+SpellEffect|121|0|0|Le personnage confectionne un enduit au propriété mystérieuse.|0|0|0|0|||
+SpellEffect|121|0|3|1|11103|0|0|0|||
+SpellDef|122|Confection d’enduit - Agilité|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture appliquée sur les armes ou les outils, les personnages pourront noté une net amélioration de leur capacité physique.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon159|false|false|0.021277,0.054711,1.0,1.0|Assinshen|false|false
+SpellReqDef|122|6|0|11103|0.0|0.0|1
+SpellEffect|122|0|2|1|92305|0|0|0|||
+SpellEffect|122|0|0|Le personnage confectionne un enduit au propriété mystérieuse.|0|0|0|0|||
+SpellEffect|122|0|3|1|11103|0|0|0|||
+SpellDef|123|Confection d’enduit - Précision|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture appliquée sur les armes ou les outils, les personnages pourront noté une net amélioration de leur capacité physique.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon159|false|false|0.021277,0.054711,1.0,1.0|Assinshen|false|false
+SpellReqDef|123|6|0|11103|0.0|0.0|1
+SpellEffect|123|0|2|1|92307|0|0|0|||
+SpellEffect|123|0|0|Le personnage confectionne un enduit au propriété mystérieuse.|0|0|0|0|||
+SpellEffect|123|0|3|1|11103|0|0|0|||
+SpellDef|124|Confection d’enduit - Vitalité|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture appliquée sur les armes ou les outils, les personnages pourront noté une net amélioration de leur capacité physique.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon159|false|false|0.021277,0.054711,1.0,1.0|Assinshen|false|false
+SpellReqDef|124|6|0|11103|0.0|0.0|1
+SpellEffect|124|0|2|1|92306|0|0|0|||
+SpellEffect|124|0|0|Le personnage confectionne un enduit au propriété mystérieuse.|0|0|0|0|||
+SpellEffect|124|0|3|1|11103|0|0|0|||
+SpellDef|125|Confection d’enduit - Cran|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture appliquée sur les armes ou les outils, les personnages pourront noté une net amélioration de leur capacité physique.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon159|false|false|0.021277,0.054711,1.0,1.0|Assinshen|false|false
+SpellReqDef|125|6|0|11103|0.0|0.0|1
+SpellEffect|125|0|2|1|92308|0|0|0|||
+SpellEffect|125|0|0|Le personnage confectionne un enduit au propriété mystérieuse.|0|0|0|0|||
+SpellEffect|125|0|3|1|11103|0|0|0|||
+SpellDef|126|Confection d’enduit - Encombrement|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture appliquée sur les armes ou les outils, les personnages pourront noté une net amélioration de leur capacité physique.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon159|false|false|0.021277,0.054711,1.0,1.0|Assinshen|false|false
+SpellReqDef|126|6|0|11103|0.0|0.0|1
+SpellEffect|126|0|2|1|92309|0|0|0|||
+SpellEffect|126|0|0|Le personnage confectionne un enduit au propriété mystérieuse.|0|0|0|0|||
+SpellEffect|126|0|3|1|11103|0|0|0|||
+SpellDef|127|Confection d’enduit - Détermination|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture appliquée sur les armes ou les outils, les personnages pourront noté une net amélioration de leur capacité physique.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon159|false|false|0.021277,0.054711,1.0,1.0|Assinshen|false|false
+SpellReqDef|127|6|0|11103|0.0|0.0|1
+SpellEffect|127|0|2|1|92310|0|0|0|||
+SpellEffect|127|0|0|Le personnage confectionne un enduit au propriété mystérieuse.|0|0|0|0|||
+SpellEffect|127|0|3|1|11103|0|0|0|||
+SpellDef|128|Réparation d'armes légendaire|Rassemble et confectionne le matériel nécessaire pour entretenir et réparer une arme légendaire.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon174|false|false|0.021277,0.054711,1.0,1.0|Assinshen|false|false
+SpellReqDef|128|6|0|11070|0.0|0.0|5
+SpellReqDef|128|6|0|11064|0.0|0.0|10
+SpellReqDef|128|6|0|41027|0.0|0.0|1
+SpellEffect|128|0|2|1|41037|0|0|0|||
+SpellEffect|128|0|0|{caster} prépare son matériel et ses ressources pour réparer une arme de légende.|0|0|0|0|||
+SpellEffect|128|0|3|1|41027|0|0|0|||
+SpellEffect|128|0|3|5|11070|0|0|0|||
+SpellEffect|128|0|3|10|11064|0|0|0|||
+SpellDef|129|Réparation d'armure légendaire|Rassemble et confectionne le matériel nécessaire pour entretenir et réparer une armure légendaire.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon171|false|false|0.021277,0.054711,1.0,1.0|Assinshen|false|false
+SpellReqDef|129|6|0|41023|0.0|0.0|1
+SpellReqDef|129|6|0|11070|0.0|0.0|5
+SpellReqDef|129|6|0|11064|0.0|0.0|10
+SpellEffect|129|0|2|1|41040|0|0|0|||
+SpellEffect|129|0|0|{caster} prépare son matériel et ses ressources pour réparer une armure de légende.|0|0|0|0|||
+SpellEffect|129|0|3|1|41023|0|0|0|||
+SpellEffect|129|0|3|5|11070|0|0|0|||
+SpellEffect|129|0|3|10|11064|0|0|0|||
+SpellDef|94|_________SINARAN||0.0|0|0|0|0||0|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false
+SpellDef|130|Confection huile de voyage|Le personnage confectionne une huile au propriété isolante. Lorsqu'elle est appliquée sur la peau, la grande chaleur et le grand froid ne semblent plus avoir d'impact sur le corps|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon257|false|false|1.0,0.401216,0.118541,1.0|Sinaran|false|false
+SpellReqDef|130|6|0|11103|0.0|0.0|1
+SpellReqDef|130|6|0|18300|0.0|0.0|1
+SpellEffect|130|0|2|1|899196|0|0|0|||
+SpellEffect|130|0|0|{caster} confectionne une mixture étrange.|0|0|0|0|||
+SpellEffect|130|0|3|1|11103|0|0|0|||
+SpellEffect|130|0|3|1|18300|0|0|0|||
+SpellDef|132|Confection breuvage de voyage|Le personnage confectionne un breuvage qui une fois ingéré le fait se sentir plus léger.  Durant quelque minute le personne ne sentira plus aucune douleur lorsqu’il sautera des falaises les plus hautes. Toutefois attention cette anti douleur n’est pas une protection divine, une chute mortelle peut le rester.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon257|false|false|1.0,0.401216,0.118541,1.0|Sinaran|false|false
+SpellReqDef|132|6|0|11103|0.0|0.0|1
+SpellReqDef|132|6|0|18293|0.0|0.0|1
+SpellEffect|132|0|2|1|2711282|0|0|0|||
+SpellEffect|132|0|0|{caster} confectionne une mixture étrange.|0|0|0|0|||
+SpellEffect|132|0|3|1|11103|0|0|0|||
+SpellEffect|132|0|3|1|18293|0|0|0|||
+SpellDef|131|Boisson chaude exceptionelle|Le personnage confectionne une boisson d'une qualité exceptionnelle, tout en y ajoutant un mélange d'épices spécial dont seul les Sinarans ont le secret. Une fois ingérer le personne sentiras une chaleur l'envahir durant plusieurs minutes.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon125|false|false|1.0,0.401216,0.118541,1.0|Sinaran|false|false
+SpellReqDef|131|6|0|92169|0.0|0.0|5
+SpellReqDef|131|6|0|92174|0.0|0.0|5
+SpellEffect|131|0|2|1|3461141|0|0|0|||
+SpellEffect|131|0|0|{caster} confectionne une boisson d'une qualité exceptionnelle.|0|0|0|0|||
+SpellEffect|131|0|3|5|92169|0|0|0|||
+SpellEffect|131|0|3|5|92174|0|0|0|||
+SpellDef|133|Boisson fraiche exceptionelle|Le personnage confectionne une boisson d'une qualité exceptionnelle, tout en y ajoutant un fruits spécial dont seul les Sinarans ont le secret. Une fois ingérer le personne sentiras une sensation de fraie l'envahir durant plusieurs minutes.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon125|false|false|1.0,0.401216,0.118541,1.0|Sinaran|false|false
+SpellReqDef|133|6|0|18274|0.0|0.0|5
+SpellReqDef|133|6|0|18040|0.0|0.0|5
+SpellEffect|133|0|2|1|3461142|0|0|0|||
+SpellEffect|133|0|0|{caster} confectionne une boisson d'une qualité exceptionnelle.|0|0|0|0|||
+SpellEffect|133|0|3|5|18274|0|0|0|||
+SpellEffect|133|0|3|5|18040|0|0|0|||
+SpellDef|134|Mérou nourrissant exceptionel|Le personnage cuisine un Mérou d'une qualité exceptionnelle tout en y ajoutant un mélange d'épices spécial dont seul les Sinarans ont le secret. Une fois mangé le personnage sentira un second souffle l'envahir, ses membres seront plus dégourdie, plus grâcieux et agile, tandis que sa vision et perception seront bien plus affutées.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon287|false|false|1.0,0.401216,0.118541,1.0|Sinaran|false|false
+SpellReqDef|134|6|0|80989|0.0|0.0|5
+SpellReqDef|134|6|0|92174|0.0|0.0|5
+SpellEffect|134|0|2|1|3461138|0|0|0|||
+SpellEffect|134|0|0|{caster} confectionne un repas d'une qualité exceptionnelle.|0|0|0|0|||
+SpellEffect|134|0|3|5|80989|0|0|0|||
+SpellEffect|134|0|3|5|92174|0|0|0|||
+SpellDef|135|Murène nourrissante exceptionelle|Le personnage cuisine une murène d'une qualité exceptionnelle tout en y ajoutant un mélange d'épices spécial dont seul les Sinarans ont le secret. Une fois mangé le personnage sentira un second souffle l'envahir, ses membres seront plus dégourdie, plus grâcieux et agile, tandis que sa vision et perception seront bien plus affutées.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon287|false|false|1.0,0.401216,0.118541,1.0|Sinaran|false|false
+SpellReqDef|135|6|0|92174|0.0|0.0|5
+SpellReqDef|135|6|0|80990|0.0|0.0|5
+SpellEffect|135|0|2|1|3461140|0|0|0|||
+SpellEffect|135|0|0|{caster} confectionne un repas d'une qualité exceptionnelle.|0|0|0|0|||
+SpellEffect|135|0|3|5|80990|0|0|0|||
+SpellEffect|135|0|3|5|92174|0|0|0|||
+SpellDef|92|_________LYSAIS||0.0|0|0|0|0||0|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false
+SpellDef|136|Endurance de fer|Le personnage s’harmonise avec le lien de sa guilde, un second souffle l'envahit et la fatigue semble un lointain souvenir. [Regen instantané de l'endurance]|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon15|false|false|0.0,0.167173,0.0,1.0|Lysais|false|false
+SpellReqDef|136|6|0|11103|0.0|0.0|1
+SpellEffect|136|0|2|1|2711348|0|0|0|||
+SpellEffect|136|0|0|{caster} semble être pris par un regain d'énergie|0|0|0|0|||
+SpellEffect|136|0|3|1|11103|0|0|0|||
+SpellDef|137|Affichage !|Placarde une note sur n'importe quel mur. Vive la liberté d'expression !|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon203|false|false|0.0,0.167173,0.0,1.0|Lysais|false|false
+SpellReqDef|137|6|0|80311|0.0|0.0|1
+SpellEffect|137|0|2|1|573500444|0|0|0|||
+SpellEffect|137|0|3|1|80311|0|0|0|||
+SpellDef|138|Alcoolique|Le personnage s’harmonise avec le lien de sa guilde, sa résistance à l'alcool augmente. (Suprime le débuff gueule de bois)|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon177|false|false|0.0,0.167173,0.0,1.0|Lysais|false|false
+SpellEffect|138|0|2|1|18068|0|0|0|||
+SpellEffect|138|0|0|L'alcool ne semble plus avoir d'effet sur {caster}|0|0|0|0|||
+SpellDef|93|_________ZENTHARI||0.0|0|0|0|0||0|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false
+SpellDef|141|Méditation|Le personnage entre en méditation, ce qui lui permet de restaurer ses points de Rituel (cette aptitude ne consomme pas le cercle de protection).|2.0|1|1|2|0|1d20 + Magie|1|109|true|false|false|false|1440|Icon236|false|false|1.0,1.0,1.0,1.0|Zenthari|false|false
+SpellReqDef|141|6|0|11122|0.0|0.0|1
+SpellReqDef|141|6|0|80523|0.0|0.0|1
+SpellEffect|141|0|1|50|140|0|0|0|||
+SpellEffect|141|2|0|{caster} fait brûler la poudre de lotus jaune et se prépare à méditer.&brk;Résultat: {roll}|0|0|0|0|||
+SpellEffect|141|0|3|1|11122|0|0|0|||
+SpellEffect|141|0|3|1|80523|0|0|0|||
+SpellEffect|141|2|1|20|140|0|0|1|||
+SpellDef|139|Cercle de protection|Trace au sol un cercle de protection à l'aide d'une mixture connue des zhentaris seuls...&brk;(Le placeable peut être mis sur le sol, mais il sert également de composant pour les rituels ==> nécessite de l'avoir dans le sac.)&brk;(ATTENTION L'OBJET NE DOIT PAS ETRE DONNE A UN AUTRE PERSONNAGE)|0.0|1|0|0|27||0|27|false|false|false|false|0|Icon145|false|false|1.0,1.0,1.0,1.0|Zenthari|false|false
+SpellReqDef|139|6|0|3461032|0.0|0.0|1
+SpellReqDef|139|6|0|11103|0.0|0.0|1
+SpellEffect|139|0|2|1|6766478|0|0|0|||
+SpellEffect|139|0|0|{caster} trace un étrange cercle au sol|0|0|0|0|||
+SpellEffect|139|0|3|1|11103|0|0|0|||
+SpellEffect|139|0|3|1|3461032|0|0|0|||
+SpellDef|111|Rituel Zenthari [PERSO]|Vous voulez réaliser un rituel PERSONNEL pour une animation ou pour RP ? C'est celui là qu'il faut prendre !|2.0|1|1|2|0|1d20 + Magie|1|109|true|true|false|false|0|Icon250|true|false|1.0,1.0,1.0,1.0|Zenthari|false|false
+SpellReqDef|111|3|0|40|0.0|0.0|
+SpellReqDef|111|3|0|99|0.0|0.0|
+SpellReqDef|111|6|0|6766478|0.0|0.0|1
+SpellReqDef|111|0|3|140|5.0|0.0|
+SpellEffect|111|2|0|{caster} se concentre pour réaliser son rituel&brk;{comment}&brk;Résultat: {roll}&brk;|0|0|0|0|||
+SpellEffect|111|0|1|-5|140|0|0|0|||
+SpellEffect|111|2|6||164|0|0|1|60|Magie|
+SpellDef|161|Initier Rituel|Permet d'initier un rituel. Fait gagner le statut de Ritualiste pendant 1h. Ritualiste débloque la statistique "Sortilège"&brk;Chaque participant au rituel ajoute à cette statistique son montant de Rituel ou son montant de Magie. |2.0|2|0|2|0|1d20 + Magie|2|0|false|false|true|false|0|Icon54|false|false|1.0,1.0,1.0,1.0|Zenthari|false|false
+SpellEffect|161|0|0|{caster} initie un rituel !|0|0|0|0|||
+SpellEffect|161|2|6||164|0|0|0|60|Magie|
+SpellEffect|161|0|10|Magie|163|0|0|0|||
+SpellEffect|161|0|9||162|0|0|0|||
+SpellEffect|161|0|9||166|0|0|0|||
+SpellDef|153|Invocation de Jaartzh|Un rituel permettant d'attirer et d'enfermer des démons mineurs. Généralement dans le but de les lâcher plus tard sur quelque chose ou quelqu'un.&brk;Un cercle pour la protection, un orbe pour façonner la prison, une bougie pour brûler les composants... (cette aptitude consomme le cercle de protection)|2.0|1|1|2|0|1d20 + Magie|2|20|false|false|false|false|1440|Icon229|false|false|1.0,1.0,1.0,1.0|Zenthari|false|false
+SpellReqDef|153|6|0|80523|0.0|0.0|1
+SpellReqDef|153|6|0|3461128|0.0|0.0|1
+SpellReqDef|153|6|0|14200|0.0|0.0|1
+SpellReqDef|153|6|0|6766478|0.0|0.0|1
+SpellReqDef|153|0|3|140|5.0|0.0|
+SpellEffect|153|2|0|{caster} se met à réciter d'étranges formules en brûlant une pâte étrange à la flamme d'une bougie, un orbe de verre vide posé devant.|0|0|0|0|||
+SpellEffect|153|0|3|1|3461128|0|0|0|||
+SpellEffect|153|0|1|-5|140|0|0|0|||
+SpellEffect|153|0|2|1|3461122|0|0|1|||
+SpellEffect|153|0|0|La fumée noirâtre issue de la bougie semble se tordre dans l'air, avant d'entrer subitement dans la flasque vide !|0|0|0|1|||
+SpellEffect|153|0|3|1|14200|0|0|1|||
+SpellEffect|153|0|3|1|6766478|0|0|1|||
+SpellEffect|153|0|0|La fumée noirâtre issue de la bougie ondule paresseusement dans l'air... ce n'est pas très efficace.|0|0|0|2|||
+SpellDef|145|Elixir de vue - Précision|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture ingérer, le personnage pourras ressentir une net amélioration de ses capacité physique.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon256|false|false|1.0,1.0,1.0,1.0|Zenthari|false|false
+SpellReqDef|145|6|0|11103|0.0|0.0|1
+SpellReqDef|145|6|0|18289|0.0|0.0|1
+SpellEffect|145|0|2|1|3461143|0|0|0|||
+SpellEffect|145|0|0|{caster} confectionne un elixir au propriété mystérieuse.|0|0|0|0|||
+SpellEffect|145|0|3|1|11103|0|0|0|||
+SpellEffect|145|0|3|1|18289|0|0|0|||
+SpellDef|146|Elixir de grâce - Agilité|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture ingérer, le personnage pourras ressentir une net amélioration de ses capacité physique.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon256|false|false|1.0,1.0,1.0,1.0|Zenthari|false|false
+SpellReqDef|146|6|0|11103|0.0|0.0|1
+SpellReqDef|146|6|0|18290|0.0|0.0|1
+SpellEffect|146|0|2|1|3461144|0|0|0|||
+SpellEffect|146|0|0|{caster} confectionne un elixir au propriété mystérieuse.|0|0|0|0|||
+SpellEffect|146|0|3|1|18290|0|0|0|||
+SpellEffect|146|0|3|1|11103|0|0|0|||
+SpellDef|147|Elixir de liberté - Endurance|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture ingérer, le personnage pourras ressentir une net amélioration de ses capacité physique.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon256|false|false|1.0,1.0,1.0,1.0|Zenthari|false|false
+SpellReqDef|147|6|0|11103|0.0|0.0|1
+SpellReqDef|147|6|0|18304|0.0|0.0|1
+SpellEffect|147|0|2|1|3461146|0|0|0|||
+SpellEffect|147|0|0|{caster} confectionne un elixir au propriété mystérieuse.|0|0|0|0|||
+SpellEffect|147|0|3|1|18304|0|0|0|||
+SpellEffect|147|0|3|1|11103|0|0|0|||
+SpellDef|148|Elixir de puissance - Force|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture ingérer, le personnage pourras ressentir une net amélioration de ses capacité physique.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon256|false|false|1.0,1.0,1.0,1.0|Zenthari|false|false
+SpellReqDef|148|6|0|11103|0.0|0.0|1
+SpellReqDef|148|6|0|18297|0.0|0.0|1
+SpellEffect|148|0|2|1|3461147|0|0|0|||
+SpellEffect|148|0|0|{caster} confectionne un elixir au propriété mystérieuse.|0|0|0|0|||
+SpellEffect|148|0|3|1|18297|0|0|0|||
+SpellEffect|148|0|3|1|11103|0|0|0|||
+SpellDef|149|Elixir de ténacité - Cran|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture ingérer, le personnage pourras ressentir une net amélioration de ses capacité physique.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon256|false|false|1.0,1.0,1.0,1.0|Zenthari|false|false
+SpellReqDef|149|6|0|11103|0.0|0.0|1
+SpellReqDef|149|6|0|18295|0.0|0.0|1
+SpellEffect|149|0|2|1|3461146|0|0|0|||
+SpellEffect|149|0|0|{caster} confectionne un elixir au propriété mystérieuse.|0|0|0|0|||
+SpellEffect|149|0|3|1|18295|0|0|0|||
+SpellEffect|149|0|3|1|11103|0|0|0|||
+SpellDef|150|Elixir de vigueur - Vitalité|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture ingérer, le personnage pourras ressentir une net amélioration de ses capacité physique.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon256|false|false|1.0,1.0,1.0,1.0|Zenthari|false|false
+SpellReqDef|150|6|0|11103|0.0|0.0|1
+SpellReqDef|150|6|0|18299|0.0|0.0|1
+SpellEffect|150|0|2|1|3461149|0|0|0|||
+SpellEffect|150|0|0|{caster} confectionne un elixir au propriété mystérieuse.|0|0|0|0|||
+SpellEffect|150|0|3|1|18299|0|0|0|||
+SpellEffect|150|0|3|1|11103|0|0|0|||
+SpellDef|151|Elixir d’engourdissement - encombrement|Le personnage confectionne une mixture au ingrédient secret et d’une senteur particulière. Une fois cette mixture ingérer, le personnage pourras ressentir une net amélioration de ses capacité physique.|0.0|1|0|0|20||0|20|false|false|false|false|0|Icon256|false|false|1.0,1.0,1.0,1.0|Zenthari|false|false
+SpellReqDef|151|6|0|11103|0.0|0.0|1
+SpellReqDef|151|6|0|18292|0.0|0.0|1
+SpellEffect|151|0|2|1|3461145|0|0|0|||
+SpellEffect|151|0|0|{caster} confectionne un elixir au propriété mystérieuse.|0|0|0|0|||
+SpellEffect|151|0|3|1|18292|0|0|0|||
+SpellEffect|151|0|3|1|11103|0|0|0|||
+MutatorDef|60|Armure légère|false|false
+MutatorCondition|60|0|9|0|0|1.0|0.0|
+MutatorAction|60|1|67|3
+MutatorAction|60|0|179|3
+MutatorDef|64|Armure intermédiaire|false|false
+MutatorCondition|64|0|9|0|0|2.0|0.0|
+MutatorAction|64|1|67|6
+MutatorDef|65|Armure lourde|false|false
+MutatorCondition|65|0|9|0|0|3.0|0.0|
+MutatorAction|65|1|67|9
+MutatorAction|65|0|179|-3
+MutatorDef|82|Chirurgien entrainé|false|false
+MutatorCondition|82|0|2|3|17|6.0|0.0|
+MutatorAction|82|3|80|0
+MutatorDef|85|Apothicaire entrainé|false|false
+MutatorCondition|85|0|2|3|18|6.0|0.0|
+MutatorAction|85|3|84|0
+StatusDef|74|[AFK]|0.0,0.0,0.890438,1.0|true
+StatusDef|56|Légérement blessé|1.0,1.0,0.139442,1.0|true
+StatusAction|56|104|0|2
+StatusDef|57|Blessé|1.0,0.388446,0.0,1.0|true
+StatusAction|57|77|0|2
+StatusAction|57|53|-1|1
+StatusAction|57|87|-1|1
+StatusDef|58|Gravement blessé|1.0,0.2251,0.017928,1.0|true
+StatusAction|58|78|-3|2
+StatusAction|58|53|-2|1
+StatusAction|58|87|-2|1
+StatusDef|59|Mortellement blessé|1.0,0.0,0.0,1.0|true
+StatusAction|59|79|0|2
+StatusAction|59|53|-3|1
+StatusAction|59|87|-3|1
+StatusDef|75|Fatigué|1.0,1.0,1.0,1.0|true
+StatusAction|75|104|0|2
+StatusAction|75|53|-1|1
+StatusAction|75|87|-1|1
+StatusDef|76|Ivre|1.0,1.0,1.0,1.0|true
+StatusAction|76|10|6|0
+StatusAction|76|77|0|2
+StatusDef|113|Sale|1.0,1.0,1.0,1.0|true
+StatusDef|114|Malade|1.0,1.0,1.0,1.0|true
+StatusAction|114|77|0|2
+StatusAction|114|53|-2|1
+StatusAction|114|87|-2|1
+StatusDef|115|Empoisonné|1.0,1.0,1.0,1.0|true
+StatusAction|115|77|0|2
+StatusAction|115|53|-2|1
+StatusAction|115|87|-2|1
+Mechanic|1|true|178|16|20|26|3|1440|833004
+Mechanic|2|true|24|16|20|24|3|1440|833002
+Mechanic|3|true|178|18|22|28|3|1440|833004
+Mechanic|4|true|24|18|20|26|3|1440|833002
+Mechanic|5|true|178|16|20|28|3|1440|833004
+Mechanic|6|true|24|14|18|26|3|1440|833002
+Mechanic|7|false|168|22|24|26|3|1440|833004
+Mechanic|8|false|172|17|19|21|3|15|833002
+Mechanic|9|false|181|15|0|0|0|0|None
+Mechanic|10|false|0|30|0|0|0|0|None
+Powers|false|0.0|0.0|0.0|0.0
