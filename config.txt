@@ -1,4 +1,4 @@
-DiceConfig|191|42|40|9|6|0|true|3|0|0|0|0|0|0|0|0|0|false|false|3
+DiceConfig|193|42|40|9|6|0|true|3|0|0|0|0|0|0|0|0|0|false|false|3
 DiceRules|0|1|20|0|21
 SkillDef|true|178|Force|Représente sa force physique, sa capacité à soulever des objets lourds, à faire des dégats|false|-1||0|true|0
 SkillDef|true|179|Agilité|Représente son agilité, sa rapidité, son sens de l'équilibre|false|-1||0|true|0
@@ -17,7 +17,7 @@ SkillDef|false|18|Apothicaire|Représente la connaissance en herboristerie, chim
 SkillDef|false|19|_________CAPACITES||false|-1|19*1.0|0|false|0
 SkillDef|false|184|Athlétisme|Représente l'utilisation de vos capacités physiques pour des occasions comme l'escalade, la course de vitesse ou d'endurance, tirer une corde, etc&brk;(moyenne Force, Agilité, Robustesse)x0.4 arr inférieur|false|-1|178*0.4;179*0.4;180*0.4|0|true|1
 SkillDef|false|20|Artisanat|Représente la connaissance d'un métier manuel ou d'une famille de métier, l'habitude du travail manuel, etc. &brk;&brk;Les joueurs sont libre de l'interprétation mais attention, un professionnel forgeron n'est pas obligatoirement un professionnel charpentier...&brk;(moyenne Agilité, Raisonnement, Robustesse)x0.4 arr inférieur|false|-1|179*0.4;182*0.4;180*0.4|0|true|1
-SkillDef|false|177|Représentation|Représente la capacité à se donner en spectacle, chant, musique, théatre.&brk;(moyenne Agilité, Intuition, Robustesse)x0.4 arr inférieur|false|-1|179*0.4;183*0.4;180*0.4|0|false|1
+SkillDef|false|177|Représentation|Représente la capacité à se donner en spectacle, chant, musique, théatre.&brk;(moyenne Agilité, Intuition, Robustesse)x0.4 arr inférieur|false|-1|179*0.4;183*0.4;180*0.4|0|true|1
 SkillDef|false|24|Escamotage|Représente la capacité à voler, à crocheter, à faire disparaitre un objet alors qu'on est en public, à faire un tour de passe passe, a subtiliser discrétement un objet sur un personnage.&brk;(moyenne Agilité, Volonté, Intuition)x0.4 arr inférieur|false|-1|179*0.4;183*0.4;181*0.4|0|true|1
 SkillDef|false|27|Occultisme|Représente les connaissances occulte en sorcellerie ou magie divine, la capacité du personnage à conduire ou à participer à des rituels.&brk;(moyenne Volonté, Intuition, Raisonnement)x0.4 arr inférieur|true|0|181*0.4;182*0.4;183*0.4|0|true|1
 SkillDef|false|22|Discrétion|Représente la capacité à se déplacer de manière silencieuse, à savoir se fondre dans la masse ou le décors, à se déplacer dans les ombres, à faire des signes sans attirer l'attention.&brk;(moyenne Agilité, Intuition)x0.4 arr inférieur|false|-1|179*0.4;183*0.4|0|true|1
@@ -170,12 +170,13 @@ PerkAction|79|4|-9|181
 PerkAction|79|4|-9|182
 PerkAction|79|4|-9|183
 PerkDef|165|false|___FEAT||0
-PerkDef|164|false|Ritualiste||0
+PerkDef|164|false|Ritualiste|Vous avez initié un rituel et avez la capacité de recueillir l'énergie des participants pour réaliser vos sortilèges.|0
 PerkAction|164|6|0|163
 PerkAction|164|8|0|190
 PerkDef|191|false|Inspiration divine|Vous êtes sous l'effet d'une inspiration divine. La fatigue vous atteind plus difficilement.|0
 PerkAction|191|7|3|53
 PerkAction|191|7|3|87
+Rune|193|None|0|0|false|||false|false
 Stat|29|Défense|10|10*1.0;12*1.0;183*1.0|0|false|false|true|Le seuil de réussite pour vous toucher.&brk;10 + moyenne (combat main nue + combat armé + Intuition)|1.0|false|false|1
 Stat|67|Armure|0||0|false|false|true|Niveau d'armure calculé automatiquement avec l'équipement porté par le joueur.&brk;Merci de rester fairplay et de ne pas cacher les pièces d'armures pour vous battre à poil...|1.0|false|false|0
 Stat|30|Resistance|0|180*1.0|0|false|false|true|Votre resistance aux coups, utilisée pour calculer si une attaque réussie vous fait des dégats. &brk;Resistance = Bonus de robustesse|1.0|false|false|0
