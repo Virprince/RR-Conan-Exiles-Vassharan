@@ -1,4 +1,4 @@
-DiceConfig|202|42|40|9|6|0|true|3|0|0|0|0|0|0|0|0|0|false|false|3
+DiceConfig|202|39|44|9|6|0|true|3|0|0|0|0|0|0|0|0|0|false|false|3
 DiceRules|0|1|20|0|21
 SkillDef|true|178|Force|Représente sa force physique, sa capacité à soulever des objets lourds, à faire des dégats|false|-1||0|true|0
 SkillDef|true|179|Agilité|Représente son agilité, sa rapidité, son sens de l'équilibre|false|-1||0|true|0
@@ -633,4 +633,5 @@ Mechanic|7|false|168|22|24|26|3|1440|833004
 Mechanic|8|false|172|17|19|21|3|15|833002
 Mechanic|9|false|181|15|0|0|0|0|None
 Mechanic|10|false|0|30|0|0|0|0|None
+Megascope|11|false|false
 Powers|false|0.0|0.0|0.0|0.0
