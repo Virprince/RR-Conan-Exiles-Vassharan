@@ -214,14 +214,14 @@ SpellEffect|69|0|9||196|0|0|1||||1
 SpellEffect|69|0|9||62|0|0|1||||1
 SpellEffect|69|0|0|## L'attaque de {caster} sur {target} est ratée&brk;##########|0|0|0|2||||1
 SpellDef|73|Blessure|Jet de blessure 1d20 - la stat d'armure + Usure&brk;Si le resultat est positif => Usure + 5&brk;Si le résultat est négatif => Fatigue + 1|1.0|1|1|2|0|1d6+1|2|0|false|false|true|false|0|Icon242|false|false|1.0,0.0,0.0,1.0|Combat|false|false|4|1|
-SpellEffect|73|0|0|##########&brk;## ( blessure = 1d20 - Armure + Usure)  &brk;&brk;|0|0|0|0||||1
+SpellEffect|73|0|0|##########&brk;## ( blessure = 1d20 - Armure + Usure)  |0|0|0|0||||1
 SpellEffect|73|0|10|1d20 - {t.Armure} + {t.Usure}|204|0|0|0||||1
 SpellEffect|73|0|9||205|0|2|0||||1
 SpellEffect|73|0|9||206|0|2|0||||1
 SpellEffect|73|0|9||207|0|2|0||||1
 SpellEffect|73|0|9||208|0|2|0||||1
-SpellDef|205|Pas de blessure|Si la ref de blessure est égale à 0, pas de blessure mais de la fatigue|1.0|1|1|1|204||2|1|false|false|false|false|0|Icon242|false|false|1.0,0.0,0.0,1.0|Combat|false|false|4|1|
-SpellReqDef|205|0|5|204|0.0|0.0|
+SpellDef|205|Pas de blessure|Si la ref de blessure est égale à 0, pas de blessure mais de la fatigue|1.0|1|1|2|0|{c.Ref Jet Blessure}|2|1|false|false|false|false|0|Icon242|false|false|1.0,0.0,0.0,1.0|Combat|false|false|4|1|
+SpellReqDef|205|0|0|204|0.0|0.0|
 SpellEffect|205|2|0|## {target} ressent à peine le coup mais ça le/la fatigue un peu.&brk;##########|0|0|0|2||||1
 SpellEffect|205|0|1|+1|53|0|0|2||||1
 SpellEffect|205|0|10|0|204|0|2|2||||1
@@ -241,7 +241,6 @@ SpellEffect|207|0|11||57|0|0|1|90|B_moyen||1
 SpellEffect|207|0|7||0|0|2|1||B_leger||1
 SpellDef|208|Blessure Grave|Le joueur reçoit une blessure grave|0.0|0|0|1|204||4|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false|4|1|f.clamp[c.Ref jet blessure, 17, 20]
 SpellReqDef|208|0|6|204|18.0|20.0|
-SpellEffect|208|0|0|{roll}|0|0|0|0||||1
 SpellEffect|208|0|0|## {target} reçoit une blessure grave &brk;## Le coup use sa résistance &brk;##########|0|0|0|1||||1
 SpellEffect|208|0|1|+5|55|0|0|1||||1
 SpellEffect|208|0|10|0|204|0|2|1||||1
