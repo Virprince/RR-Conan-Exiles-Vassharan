@@ -1,4 +1,4 @@
-DiceConfig|209|39|44|9|6|0|true|3|0|0|0|0|0|0|0|0|0|false|false|3
+DiceConfig|210|39|44|9|6|0|true|3|0|0|0|0|0|0|0|0|0|false|false|3
 DiceRules|0|1|20|0|21|false|false
 Gear|false|true|true|true|true|true|0
 SkillDef|true|178|Force|Représente sa force physique, sa capacité à soulever des objets lourds, à faire des dégats|false|-1||0|true|0
@@ -189,11 +189,11 @@ Stat|55|Usure|20||0|false|true|true|Chaque blessure dans un combat RR ajoute des
 Stat|109|Esprit|1|181*1.0;27*1.0;28*1.0|0|false|false|true|Votre potentiel magique... peut servir lorsque vous êtes sollicité lors de rituel, sert aussi de resistance à la magie.|1.0|false|false|0
 Stat|140|Rituel|0|27*1.0;28*1.0;181*0.3|0|false|false|false|Vos points pour effectuer des rituels lorsque vous en êtes capable.|1.0|true|false|0
 Stat|163|Sortilège|0||0|false|false|false|Débloqué lors d'un rituel, représente le pouvoir magique accumulé part les participants ! &brk;Attention, c'est dangereux.... &brk;(et si tu vois ça alors que tu n'as jamais fait de rituel c'est un bug qu'il faut signaler :) ) |1.0|false|false|0
+Stat|204|Niveau Blessure|0||0|false|false|true|Lors des combats ou des évènements, c'est votre dernier Jet de blessure.|1.0|false|false|0
 Stat|194|____TOOLS|0||0|false|false|false||1.0|false|false|0
 Stat|30|Resistance|0|180*1.0|0|false|false|true|Votre resistance aux coups, utilisée pour calculer si une attaque réussie vous fait des dégats. &brk;Resistance = Bonus de robustesse|1.0|false|true|0
 Stat|87|Ref Fatigue|0|180*0.4;181*0.4|1|false|false|false||1.0|false|true|1
-Stat|195|Fatigué|0||0|false|false|false|0 => false&brk;1 => true|1.0|false|true|0
-Stat|204|Ref Jet Blessure|0||0|false|false|true||1.0|false|false|0
+Stat|195|Est Fatigué|0||0|false|false|false|0 => false&brk;1 => true|1.0|false|true|0
 SpellDef|88|_________COMBAT||0.0|0|0|0|0||0|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false|4|1|
 SpellDef|68|Attaque main nue|Pour toute attaque sans arme: Coup de poing, coup de pied, lutte, bagarre, art martiaux, etc|1.0|0|1|0|10||1|29|false|true|true|false|0|Icon264|true|false|1.0,1.0,1.0,1.0|Combat|false|false|4|1|
 SpellEffect|68|0|0|##########&brk;## {caster} attaque {target} à mains nue: {roll}&brk;## {comment}|0|0|0|0||||1
@@ -220,39 +220,33 @@ SpellEffect|73|0|9||205|0|2|0||||1
 SpellEffect|73|0|9||206|0|2|0||||1
 SpellEffect|73|0|9||207|0|2|0||||1
 SpellEffect|73|0|9||208|0|2|0||||1
-SpellDef|205|Pas de blessure|Si la ref de blessure est égale à 0, pas de blessure mais de la fatigue|1.0|1|1|2|0|{c.Ref Jet Blessure}|2|1|false|false|false|false|0|Icon242|false|false|1.0,0.0,0.0,1.0|Combat|false|false|4|1|
-SpellReqDef|205|0|0|204|0.0|0.0|
+SpellDef|205|Pas de blessure|Si la ref de blessure est égale à 0, pas de blessure mais de la fatigue|1.0|1|1|2|0|{c.Niveau Blessure}|2|1|false|false|false|false|0|Icon242|false|false|1.0,0.0,0.0,1.0|Combat|false|false|4|1|
 SpellEffect|205|2|0|## {target} ressent à peine le coup mais ça le/la fatigue un peu.&brk;##########|0|0|0|2||||1
 SpellEffect|205|0|1|+1|53|0|0|2||||1
-SpellEffect|205|0|10|0|204|0|2|2||||1
 SpellEffect|205|0|9||81|0|2|2||||1
-SpellDef|206|Blessure légère|Le joueur reçoit une blessure grave|0.0|0|0|1|204||4|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false|4|1|f.clamp[c.Ref jet blessure, 1, 10]
+SpellDef|206|Blessure légère|Le joueur reçoit une blessure légère|0.0|0|0|2|0|c.Niveau Blessure|4|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false|4|1|0
 SpellReqDef|206|0|6|204|1.0|11.0|
 SpellEffect|206|0|0|## {target} reçoit une blessure légère&brk;## Le coup use sa résistance&brk;##########|0|0|0|1||||1
 SpellEffect|206|0|1|+5|55|0|0|1||||1
-SpellEffect|206|0|10|0|204|0|2|1||||1
-SpellEffect|206|0|11||56|0|0|1|60|B_leger||1
-SpellDef|207|Blessure moyenne|Le joueur reçoit une blessure moyenne|0.0|0|0|1|204||4|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false|4|1|f.clamp[c.Ref jet blessure, 10, 17]
+SpellEffect|206|0|11||56|0|0|1|30|B_leger||1
+SpellDef|207|Blessure moyenne|Le joueur reçoit une blessure moyenne|0.0|0|0|2|0|c.Niveau Blessure|2|9|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false|4|1|
 SpellReqDef|207|0|6|204|10.0|18.0|
 SpellEffect|207|0|0|## {target} reçoit une blessure moyenne&brk;## Le coup use sa résistance&brk;##########|0|0|0|1||||1
 SpellEffect|207|0|1|+5|55|0|0|1||||1
-SpellEffect|207|0|10|0|204|0|2|1||||1
-SpellEffect|207|0|11||57|0|0|1|90|B_moyen||1
+SpellEffect|207|0|11||57|0|0|1|60|B_moyen||1
 SpellEffect|207|0|7||0|0|2|1||B_leger||1
-SpellDef|208|Blessure Grave|Le joueur reçoit une blessure grave|0.0|0|0|1|204||4|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false|4|1|f.clamp[c.Ref jet blessure, 17, 20]
+SpellDef|208|Blessure Grave|Le joueur reçoit une blessure grave|0.0|0|0|2|0|c.Niveau Blessure|4|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false|4|1|17
 SpellReqDef|208|0|6|204|18.0|20.0|
 SpellEffect|208|0|0|## {target} reçoit une blessure grave &brk;## Le coup use sa résistance &brk;##########|0|0|0|1||||1
 SpellEffect|208|0|1|+5|55|0|0|1||||1
-SpellEffect|208|0|10|0|204|0|2|1||||1
-SpellEffect|208|0|11||58|0|0|1|180|B_grave||1
+SpellEffect|208|0|11||58|0|0|1|90|B_grave||1
 SpellEffect|208|0|7||0|0|0|1||B_leger||1
 SpellEffect|208|0|7||0|0|0|1||B_moyen||1
-SpellDef|209|Blessure mortelle|Le joueur reçoit une blessure mortelle&brk;- Statut mortellement blessé 240min&brk;- Retrait des statut inférieurs|0.0|0|0|1|204||4|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false|4|1|f.clamp[c.Ref jet blessure, 17, 20]
+SpellDef|209|Blessure mortelle|Le joueur reçoit une blessure mortelle&brk;- Statut mortellement blessé 240min&brk;- Retrait des statut inférieurs|0.0|0|0|2|0|c.Niveau Blessure|4|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false|4|1|19
 SpellReqDef|209|0|3|204|20.0|20.0|
 SpellEffect|209|0|0|## {target} reçoit une blessure mortelle, il/elle est hors combat et doit recevoir des soins dans les plus bref délais&brk;##########|0|0|0|1||||1
 SpellEffect|209|0|1|+5|55|0|0|1||||1
-SpellEffect|209|0|10|0|204|0|2|1||||1
-SpellEffect|209|0|11||59|0|0|1|240|B_mortelle||1
+SpellEffect|209|0|11||59|0|0|1|120|B_mortelle||1
 SpellEffect|209|0|7||0|0|0|1||B_leger||1
 SpellEffect|209|0|7||0|0|0|1||B_moyen||1
 SpellEffect|209|0|7||0|0|0|1||B_grave||1
@@ -280,9 +274,10 @@ SpellEffect|84|0|0|## {caster} a fait des merveilles, {target} se sent frais. &b
 SpellEffect|84|0|10|0|53|0|1|1||||1
 SpellEffect|84|0|9||81|0|2|1||||1
 SpellEffect|84|0|0|## {caster} semble avoir raté son coup... {target} a toujours mal ! &brk;##########|0|0|0|2||||1
-SpellDef|187|Premiers soins|Capacité pour réduire les niveaux de blessure d'un joueur après un roll. Purement RP mais vous pouvez sauver des vies ! &brk;ex: &brk;Roll blessure: 22 => blessure mortelle&brk;A votre appréciation, si votre roll de premier soin est suppérieur au roll de blessure, on peut considérer que le niveau de blessure est diminué de 1 (blessure grave), la blessure est stabilisée.|1.0|0|1|2|0|1d20 + {c.}|2|16|false|true|false|false|15|Icon287|true|false|0.0,1.0,0.0,1.0|Soin|false|false|4|1|
-SpellEffect|187|0|0|##########&brk;## {caster} semble maitriser dans son domaine en soignant {target}, est ce que ça sera suffisant ? &brk;## {comment}&brk;## {roll}&brk;##########|0|0|0|1||||1
-SpellEffect|187|0|0|##########&brk;## {caster} ne semble pas réussire à soigner {target} dans l'urgence !&brk;## {roll}&brk;##########|0|0|0|2||||1
+SpellDef|187|Premier soins|Capacité pour réduire les niveaux de blessure d'un joueur après un roll. Purement RP mais vous pouvez sauver des vies ! |1.0|0|1|2|0|1d20 + {c.Premier soins}|2|16|false|true|false|false|15|Icon287|true|false|0.0,1.0,0.0,1.0|Soin|false|false|4|1|
+SpellEffect|187|0|0|##########&brk;## {caster} porte les premier soins à {target}&brk;## {comment}&brk;## {roll}|0|0|0|0||||1
+SpellEffect|187|0|0|## Les soins semblent efficaces, {target} a moins mal, mais il faudra du temps pour guerrir complètement&brk;## rappel:  réduire blessure mortelle à grave: 20+&brk;##########|0|0|0|1||||1
+SpellEffect|187|0|0|## {caster} ne semble pas réussire à soigner {target} dans l'urgence !&brk;##########|0|0|0|2||||1
 SpellDef|70|_________roll auto||0.0|0|0|0|0||0|0|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0||false|false|4|1|
 SpellDef|81|Etat fatigué ?|Compare Fatigue + 1 à la reférence de Fatigue, quand la comparaison est un succès, le joueur est à sa Fatigue max et ajoute 5 points d'Usure.|1.0|0|1|2|0|{c.Fatigue} + 1|1|87|false|false|true|false|0|None|false|false|1.0,1.0,1.0,1.0|Auto|false|false|4|1|
 SpellEffect|81|0|10|1|195|0|2|1||||1
@@ -290,7 +285,7 @@ SpellEffect|81|0|6||197|0|0|1|-1|Fatigue||1
 SpellEffect|81|2|10|0|195|0|2|2||||1
 SpellEffect|81|0|7||0|0|0|2||Fatigue||1
 SpellDef|196|Blessure sur attaque ? [fatigué]|Automatise si l'attaque blesse ou non la cible&brk;Opposition Force de l'attaquant vs Resistance de la cible|1.0|0|1|1|30|{c.}|0|178|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0|Auto|false|false|4|1|
-SpellReqDef|196|0|2|195|0.0|0.0|
+SpellReqDef|196|0|0|195|1.0|0.0|
 SpellEffect|196|2|0|## {caster} a encaissé trop de coup, il subit une blessure !&brk;## Jet de blessure à faire&brk;|0|0|0|0||||1
 SpellDef|62|Blessure sur attaque ? [normal]|Automatise si l'attaque blesse ou non la cible&brk;Opposition Force de l'attaquant vs Resistance de la cible|1.0|0|1|1|30|{c.}|0|178|false|false|false|false|0|None|false|false|1.0,1.0,1.0,1.0|Auto|false|false|4|1|
 SpellReqDef|62|0|0|195|0.0|0.0|
